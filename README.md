@@ -21,8 +21,8 @@ pedidos exiba a lista em ordem de proximidade em relação a padaria. Para que s
 possível obter a proximidade é necessário que a padaria também tenha uma localização
 definida, por exemplo: lat = 0, lon = 0;
 
-Requisitos
-º Desenvolva este sistema Desktop em Java
-º O sistema deve estar contido em um único arquivo .java. Pode ter várias classes porém tudo em um único arquivo .java.
-º Os cadastros devem conter apenas inserir e deletar.
-º O sistema deve ter interface gráfica (lib swing).
+align="center">Requisitos</p>
+º Desenvolva este sistema Desktop em Java</br>
+º O sistema deve estar contido em um único arquivo .java. Pode ter várias classes porém tudo em um único arquivo .java.</br>
+º Os cadastros devem conter apenas inserir e deletar.</br>
+º O sistema deve ter interface gráfica (lib swing).</br>

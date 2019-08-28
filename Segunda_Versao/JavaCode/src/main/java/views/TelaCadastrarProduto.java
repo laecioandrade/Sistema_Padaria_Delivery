@@ -63,7 +63,12 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
 
         jCheckBox7.setText("X-Tudo");
 
-        jCheckBox8.setText("jCheckBox8");
+        jCheckBox8.setText("Bolo de Milho");
+        jCheckBox8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox8ActionPerformed(evt);
+            }
+        });
 
         jCheckBox9.setText("Bolo de Chocolate");
 
@@ -462,6 +467,10 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
             cadproduto.setVisible(true);
             dispose();
     }//GEN-LAST:event_btCadastrarActionPerformed
+
+    private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox8ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

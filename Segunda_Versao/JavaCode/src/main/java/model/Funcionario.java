@@ -12,7 +12,6 @@ package model;
 public class Funcionario {
     private int ID;
     private String nome;
-    private String cpf;
     private String status;
 
     /**
@@ -41,20 +40,6 @@ public class Funcionario {
      */
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    /**
-     * @return the cpf
-     */
-    public String getCpf() {
-        return cpf;
-    }
-
-    /**
-     * @param cpf the cpf to set
-     */
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     /**

@@ -40,8 +40,6 @@ public class TelaCadastroEmpacotador extends javax.swing.JFrame {
         nomeEmpacotador = new javax.swing.JTextField();
         btVoltar = new javax.swing.JButton();
         btCadastrar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        cpfEmpacotador = new javax.swing.JTextField();
 
         jTextField3.setText("jTextField3");
 
@@ -71,14 +69,6 @@ public class TelaCadastroEmpacotador extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("CPF");
-
-        cpfEmpacotador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfEmpacotadorActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,13 +86,9 @@ public class TelaCadastroEmpacotador extends javax.swing.JFrame {
                         .addComponent(btCadastrar)
                         .addGap(42, 42, 42))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
+                        .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nomeEmpacotador)
-                            .addComponent(cpfEmpacotador, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE))
+                        .addComponent(nomeEmpacotador, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -114,11 +100,7 @@ public class TelaCadastroEmpacotador extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(nomeEmpacotador, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(cpfEmpacotador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btVoltar)
                     .addComponent(btCadastrar))
@@ -143,11 +125,10 @@ public class TelaCadastroEmpacotador extends javax.swing.JFrame {
         Embalador embalador = new Embalador();
         int ver = 0;
         try {
-            if(nomeEmpacotador.getText().length()<3 || cpfEmpacotador.getText().length()<11 || cpfEmpacotador.getText().length()>11){
+            if(nomeEmpacotador.getText().length()<3){
                 ver = 1;
             }else{
                 embalador.setNome(nomeEmpacotador.getText());
-                embalador.setCpf(cpfEmpacotador.getText());
             }
         } catch (Exception e) {
             ver = 1;
@@ -184,17 +165,11 @@ public class TelaCadastroEmpacotador extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btCadastrarActionPerformed
 
-    private void cpfEmpacotadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfEmpacotadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfEmpacotadorActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
     private javax.swing.JButton btVoltar;
-    private javax.swing.JTextField cpfEmpacotador;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField nomeEmpacotador;

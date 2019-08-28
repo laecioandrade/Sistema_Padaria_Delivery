@@ -158,8 +158,11 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jCheckBox8"/>
+        <Property name="text" type="java.lang.String" value="Bolo de Milho"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox9">
       <Properties>

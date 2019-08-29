@@ -10,25 +10,16 @@ package model;
  * @author laeciorodrigues
  */
 public class Produto {
-    private String ID;
     private int qtd;
     private double preco;
     private String nome;
-
-    /**
-     * @return the ID
-     */
-    public String getID() {
-        return ID;
+    
+    public Produto(String nome, double preco, int qtd) {
+        this.qtd = qtd;
+        this.preco = preco;
+        this.nome = nome;
     }
-
-    /**
-     * @param ID the ID to set
-     */
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
+ 
     /**
      * @return the qtd
      */

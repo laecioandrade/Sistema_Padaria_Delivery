@@ -23,6 +23,7 @@ public class TelaCadastrarPedido extends javax.swing.JFrame {
      * Creates new form TelaCadastrarPedido
      */
     Padaria padaria;
+    Pedido pedido = new Pedido();
     public TelaCadastrarPedido(Padaria pad) {
         padaria = pad;
         initComponents();
@@ -243,7 +244,7 @@ public class TelaCadastrarPedido extends javax.swing.JFrame {
     private void btConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfirmarActionPerformed
         Embalador embala = new Embalador();
         Entregador entre = new Entregador();
-        Pedido pedido = new Pedido();
+        //Pedido pedido = new Pedido();
         pedido.setPreco(0.0);
         //Produto produto = new Produto();
         String id = null;
@@ -261,214 +262,46 @@ public class TelaCadastrarPedido extends javax.swing.JFrame {
                         pedido.setBrinde("Não");
                     }
                     if(jCheckBox1.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Pão de Queijo")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Pão de Queijo!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox1, verQtd);
                     }
                     if(jCheckBox2.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Misto Quente")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Misto Quente!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox2, verQtd);
                     }
                     if(jCheckBox3.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Bauru")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Bauru!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox3, verQtd);
                     }
                     if(jCheckBox4.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Hamburguer")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Hamburgues!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox4, verQtd);
                     }
                     if(jCheckBox5.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Pão (simples)")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Pão (simples)!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox5, verQtd);
                     }
                     if(jCheckBox6.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("X-Bacon")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem X-Bacon!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox6, verQtd);
                     }
                     if(jCheckBox7.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("X-Tudo")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem X-Tudo!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox7, verQtd);
                     }
                     if(jCheckBox8.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Bolo de Milho")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Bolo de Milho!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox8, verQtd);
                     }
                     if(jCheckBox9.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Bolo de Chocolate")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Bolo de Chocolate!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox9, verQtd);
                     }
                     if(jCheckBox10.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Bolo de Cenoura")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Bolo de Cenoura!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox10, verQtd);
                     }
                     if(jCheckBox11.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Refrigerante (lata)")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Refrigerante (lata)!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox11, verQtd);
                     }
                     if(jCheckBox12.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Refrigerante (2l)")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Refrigerante (2l)!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox12, verQtd);
                     }
                     if(jCheckBox13.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Suco")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Suco!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox13, verQtd);
                     }
                     if(jCheckBox14.isSelected()){
-                        for(int z=0;z<padaria.getProdutos().size();z++){
-                            if(padaria.getProdutos().get(z).getNome().equals("Vitamina")){
-                                if(padaria.getProdutos().get(z).getQtd()>0){
-                                    pedido.getProdutos().add(padaria.getProdutos().get(z));
-                                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
-                                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
-                                }else{
-                                    verQtd = 0;
-                                    JFrame frame = new JFrame ("Aviso!");
-                                    JOptionPane.showMessageDialog (frame, "Sem Vitamina!");
-                                }
-                            }
-                        }
+                        verQtd = pedidoF(jCheckBox14, verQtd);
                     }
                     pedido.setStatus("Aguardando");
                     int cont=0;
@@ -526,7 +359,25 @@ public class TelaCadastrarPedido extends javax.swing.JFrame {
             dispose();
         }
     }//GEN-LAST:event_btConfirmarActionPerformed
-
+    
+    private int pedidoF(javax.swing.JCheckBox select, int verQtd){
+        //Pedido pedido = new Pedido();
+        for(int z=0;z<padaria.getProdutos().size();z++){
+            if(padaria.getProdutos().get(z).getNome().equals(select.getText())){
+                if(padaria.getProdutos().get(z).getQtd()>0){
+                    pedido.getProdutos().add(padaria.getProdutos().get(z));
+                    pedido.setPreco(pedido.getPreco()+padaria.getProdutos().get(z).getPreco());
+                    padaria.getProdutos().get(z).setQtd(padaria.getProdutos().get(z).getQtd()-1);
+                }else{
+                    verQtd = 0;
+                    JFrame frame = new JFrame ("Aviso!");
+                    JOptionPane.showMessageDialog (frame, select.getText());
+                }
+            }
+        }
+        return verQtd;
+    }
+    
     private void idClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idClienteActionPerformed

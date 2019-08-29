@@ -207,257 +207,47 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
     }//GEN-LAST:event_btVoltarActionPerformed
 
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
-        if(jCheckBox1.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Pão de Queijo")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Pão de Queijo");
-                    prod.setPreco(1.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+            if(jCheckBox1.isSelected()){
+               salvar(jCheckBox1); 
             }
             if(jCheckBox2.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Misto Quente")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Misto Quente");
-                    prod.setPreco(11.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox2);
             }
             if(jCheckBox3.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Bauru")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Bauru");
-                    prod.setPreco(11.50);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox3);
             }
             if(jCheckBox4.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Hamburguer")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Hamburguer");
-                    prod.setPreco(10.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox4);
             }
             if(jCheckBox5.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Pão (simples)")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Pão (simples)");
-                    prod.setPreco(0.50);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox5);
             }
             if(jCheckBox6.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("X-Bacon")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("X-Bacon");
-                    prod.setPreco(16.90);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox6);
             }
             if(jCheckBox7.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("X-Tudo")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("X-Tudo");
-                    prod.setPreco(26.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox7);
             }
             if(jCheckBox8.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Bolo de Milho")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Bolo de Milho");
-                    prod.setPreco(7.50);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox8);
             }
             if(jCheckBox9.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Bolo de Chocolate")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Bolo de Chocolate");
-                    prod.setPreco(9.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox9);
             }
             if(jCheckBox10.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Bolo de Cenoura")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Bolo de Cenoura");
-                    prod.setPreco(8.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox10);
             }
             if(jCheckBox11.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Refrigerante (lata)")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Refrigerante (lata)");
-                    prod.setPreco(3.50);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox11);
             }
             if(jCheckBox12.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Refrigerante (2l)")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Refrigerante (2l)");
-                    prod.setPreco(7.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox12);
             }
             if(jCheckBox13.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Suco")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Suco");
-                    prod.setPreco(2.50);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox3);
             }
             if(jCheckBox14.isSelected()){
-                int veri=0;
-                if(padaria.getProdutos()!=null){
-                    for(int i=0; i<padaria.getProdutos().size();i++){
-                        if(padaria.getProdutos().get(i).getNome().equals("Vitamina")){
-                            veri=1;
-                            padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
-                        }
-                    }
-                }
-                if(veri==0){
-                    Produto prod = new Produto();
-                    prod.setNome("Vitamina");
-                    prod.setPreco(3.00);
-                    prod.setQtd(1);
-                    padaria.getProdutos().add(prod);
-                }
+                salvar(jCheckBox14);
             }
             JFrame frame = new JFrame ("Aviso!");
                 JOptionPane.showMessageDialog (frame, "Cadastrado Com Sucesso!");
@@ -468,6 +258,76 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
             dispose();
     }//GEN-LAST:event_btCadastrarActionPerformed
 
+    private void salvar(javax.swing.JCheckBox select){
+        int veri=0;
+        if(padaria.getProdutos()!=null){
+            for(int i=0; i<padaria.getProdutos().size();i++){
+                if(padaria.getProdutos().get(i).getNome().equals(select.getText())){
+                    veri=1;
+                    padaria.getProdutos().get(i).setQtd(padaria.getProdutos().get(i).getQtd()+1);
+                }
+            }
+        }
+        if(veri==0){
+            if(select.getText().equals("Pão de Queijo")){
+                Produto prod = new Produto(select.getText(),1.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Misto Quente")){
+                Produto prod = new Produto(select.getText(),5.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Bauru")){
+                Produto prod = new Produto(select.getText(),8.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Hamburguer")){
+                Produto prod = new Produto(select.getText(),6.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Pão (simples)")){
+                Produto prod = new Produto(select.getText(),0.50,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("X-Bacon")){
+                Produto prod = new Produto(select.getText(),16.90,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("X-Tudo")){
+                Produto prod = new Produto(select.getText(),26.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Bolo de Milho")){
+                Produto prod = new Produto(select.getText(),7.50,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Bolo de Chocolate")){
+                Produto prod = new Produto(select.getText(),9.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Bolo de Cenoura")){
+                Produto prod = new Produto(select.getText(),8.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Refrigerante (lata)")){
+                Produto prod = new Produto(select.getText(),3.50,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Refrigerante (2l)")){
+                Produto prod = new Produto(select.getText(),7.00,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Suco")){
+                Produto prod = new Produto(select.getText(),2.50,1);
+                padaria.getProdutos().add(prod);
+            }
+            if(select.getText().equals("Vitamina")){
+                Produto prod = new Produto(select.getText(),3.00,1);
+                padaria.getProdutos().add(prod);
+            }
+        }
+    }
+    
     private void jCheckBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox8ActionPerformed

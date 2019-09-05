@@ -18,3 +18,32 @@ realizado com produto, quantidade, latitude e longitude do cliente. Após adicio
 pedidos exiba a lista em ordem de proximidade em relação a padaria. Para que seja
 possível obter a proximidade é necessário que a padaria também tenha uma localização
 definida, por exemplo: lat = 0, lon = 0;
+
+<p align="center">Algumas correções</p>
+
+1 - Organização das classes por arquivos
+As classes estão organizadas em diretórios pela suas funcionalidades no sistema, as telas do software estão no diretório views, as classes que constituem a padaria estão em model e a classe principal por sua vez se encontra no diretório “principal”.
+
+2 - Inserção de Blindagem nas classes
+As classes presentes no diretório model estão blindadas caso ocorrer algum eventual erro no programa.
+
+<p align="center">Refactory</p>
+
+1 - Substituir Variável por Consulta (Replace Variable With Query): foi utilizado para remover algumas variáveis que poderiam utilizar métodos. 
+
+2 - Criar um Método Padrão (Create a Default Method): em algumas classes foi criado um método padrão para ser utilizado com frequência.
+
+3 - Preservar o Objeto Inteiro (Preserve Entire Object): para diminuir listas de parâmetros.
+
+4 - Extrair Subclasse (Extract Subclass): para utilizar funcionalidades diferentes nas subclasses.
+
+5 - Substituir Atributo por Objeto (Replace Attribute with Object): atributos representados por objetos.
+
+6 - Remover Parâmetro (Remove Parameter): alguns métodos tinham parâmetros não utilizados.
+
+7 - Encapsular Campo (Encapsulate Field): algumas classes tinham atributos públicos.
+
+8 - Extrair Classe (Extract Class): extrair as classes pois no começo estava tudo em uma única classe.
+
+
+

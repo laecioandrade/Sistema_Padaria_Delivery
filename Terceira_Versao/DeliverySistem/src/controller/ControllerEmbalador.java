@@ -66,16 +66,13 @@ public class ControllerEmbalador {
                 pst.executeUpdate();
 
                 System.out.println("Removido com sucesso!");
-
             } catch (Exception e) {
                 System.out.println("Erro: "+ e.getMessage());
-                ver = 1;
             }
         } catch (Exception e) {
-            ver = 1;
             System.out.println("Erro: "+e);
         }
-        return ver != 1;
+        return ver != 0;
     }
     
     public ArrayList<Embalador> RetornarEmbaladores(){
@@ -109,5 +106,35 @@ public class ControllerEmbalador {
             Logger.getLogger(ControllerEmbalador.class.getName()).log(Level.SEVERE,null, ex);
         }
         return null;
+    }
+    
+    public void TrabEmbalador(){
+        try{    
+            Embalador emb = new Embalador();
+            PreparedStatement pst = cn.prepareStatement("UPDATE embalador SET status=(?) WHERE idembalador = 1;");
+            pst.setString(1, emb.trabalhando());
+
+
+            pst.executeUpdate();
+
+            System.out.println("Dados cadastrados com sucesso!");
+        } catch (Exception e) {
+            System.out.println("Erro: "+ e.getMessage());
+        }
+    }
+    
+    public void AguaEmbalador(){
+        try{    
+            Embalador emb = new Embalador();
+            PreparedStatement pst = cn.prepareStatement("UPDATE embalador SET status=(?) WHERE idembalador = 2;");
+            pst.setString(1, emb.aguardando());
+
+
+            pst.executeUpdate();
+
+            System.out.println("Dados cadastrados com sucesso!");
+        } catch (Exception e) {
+            System.out.println("Erro: "+ e.getMessage());
+        }
     }
 }

@@ -298,7 +298,7 @@ public class TelaCadastrarPedido extends javax.swing.JFrame {
             dispose();
         }else{
             JFrame frame = new JFrame ("Aviso!");
-            JOptionPane.showMessageDialog (frame, "Preencha os dados corretamente!");
+            JOptionPane.showMessageDialog (frame, "Id não encontrado!");
             TelaCadastrarPedido pedid = new TelaCadastrarPedido();
             pedid.setLocationRelativeTo(null);
             pedid.setVisible(true);

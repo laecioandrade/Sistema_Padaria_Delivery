@@ -110,4 +110,34 @@ public class ControllerEntregador {
         }
         return null;
     }
+    
+    public void TrabEntregador(){
+        try{    
+            Entregador emb = new Entregador();
+            PreparedStatement pst = cn.prepareStatement("UPDATE entregador SET status=(?) WHERE identregador = 1;");
+            pst.setString(1, emb.trabalhando());
+
+
+            pst.executeUpdate();
+
+            System.out.println("Dados cadastrados com sucesso!");
+        } catch (Exception e) {
+            System.out.println("Erro: "+ e.getMessage());
+        }
+    }
+    
+    public void AguaEntregador(){
+        try{    
+            Entregador emb = new Entregador();
+            PreparedStatement pst = cn.prepareStatement("UPDATE entregador SET status=(?) WHERE identregador = 1;");
+            pst.setString(1, emb.aguardando());
+
+
+            pst.executeUpdate();
+
+            System.out.println("Dados cadastrados com sucesso!");
+        } catch (Exception e) {
+            System.out.println("Erro: "+ e.getMessage());
+        }
+    }
 }

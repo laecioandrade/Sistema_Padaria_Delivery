@@ -5,8 +5,10 @@
  */
 package views;
 
+import controller.ControllerCliente;
 import controller.ControllerPedido;
 import java.util.ArrayList;
+import model.Cliente;
 import model.Pedido;
 
 /**
@@ -55,9 +57,26 @@ public class TelaPedidos extends javax.swing.JFrame {
         listPedidos.setModel(new javax.swing.AbstractListModel() {
             //String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             ControllerPedido contro = new ControllerPedido();
+            //    ControllerCliente clientt = new ControllerCliente();
+            //    ArrayList<Cliente> rescli = clientt.RetornarClientes();
             ArrayList<Pedido> results = contro.RetornarPedidos();
+            /*    for(int i=0; i<rescli.size();i++){
+                if((rescli.get(i).getLat()+rescli.get(i).getLog())>(rescli.get(i+1).getLat()+rescli.get(i+1).getLog())){
+                    Cliente aux = rescli.get(i);
+                    rescli.get(i) = rescli.get(i+1);
+                    rescli.get(i+1) = rescli.get(i);
+                }
+            }
+            ArrayList<Pedido> pedidoss = new ArrayList();
+            for(Cliente cli:rescli){
+                for(Pedido ped:results){
+                    if(cli.getID()==ped.getID()){
+                        pedidoss.add(ped);
+                    }
+                }
+            }*/
             public int getSize() { return results.size(); }
-            public Object getElementAt(int i) { return results.get(i).getID()+" -> Preço:"+results.get(i).getPreco()+" -> Brinde:"+results.get(i).getBrinde()+" -> Status:"+results.get(i).getStatus(); }
+            public Object getElementAt(int i) { return results.get(i).getID()+" -> Preço: "+results.get(i).getPreco()+" -> Brinde: "+results.get(i).getBrinde()+" -> Status: "+results.get(i).getStatus(); }
         });
         jScrollPane1.setViewportView(listPedidos);
 

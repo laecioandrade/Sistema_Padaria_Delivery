@@ -106,7 +106,7 @@
         <Component class="javax.swing.JList" name="listClientes">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.AbstractListModel(){&#xa;    //String[] strings = { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot; };&#xa;    //ArrayList&lt;Cliente&gt; results = new ArrayList&lt;&gt;();&#xa;    ControllerCliente contro = new ControllerCliente();&#xa;    ArrayList&lt;Cliente&gt; results = contro.RetornarClientes();&#xa;    public int getSize() { return results.size(); }&#xa;    public Object getElementAt(int i) { return results.get(i).getID()+&quot; -&gt; Nome:&quot;+results.get(i).getNome()+&quot; -&gt; Status&quot;+results.get(i).getStatus(); }&#xa;}" type="code"/>
+              <Connection code="new javax.swing.AbstractListModel(){&#xa;    //String[] strings = { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot; };&#xa;    //ArrayList&lt;Cliente&gt; results = new ArrayList&lt;&gt;();&#xa;    ControllerCliente contro = new ControllerCliente();&#xa;    ArrayList&lt;Cliente&gt; results = contro.RetornarClientes();&#xa;    public int getSize() { return results.size(); }&#xa;    public Object getElementAt(int i) { return results.get(i).getID()+&quot; -&gt; Nome: &quot;+results.get(i).getNome()+&quot; -&gt; Status: &quot;+results.get(i).getStatus(); }&#xa;}" type="code"/>
             </Property>
           </Properties>
           <AuxValues>

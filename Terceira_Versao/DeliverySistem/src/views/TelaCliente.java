@@ -64,7 +64,7 @@ public class TelaCliente extends javax.swing.JFrame {
             ControllerCliente contro = new ControllerCliente();
             ArrayList<Cliente> results = contro.RetornarClientes();
             public int getSize() { return results.size(); }
-            public Object getElementAt(int i) { return results.get(i).getID()+" -> Nome:"+results.get(i).getNome()+" -> Status"+results.get(i).getStatus(); }
+            public Object getElementAt(int i) { return results.get(i).getID()+" -> Nome: "+results.get(i).getNome()+" -> Status: "+results.get(i).getStatus(); }
         });
         jScrollPane1.setViewportView(listClientes);
 

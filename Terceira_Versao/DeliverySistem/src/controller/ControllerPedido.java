@@ -32,6 +32,7 @@ public class ControllerPedido {
     Connection cn = cc.conexion();
     
     public boolean CadastrarPedido(String idclien, ArrayList<Integer> numero){
+        int ver = 0;
         ControllerCliente concli = new ControllerCliente();
         ArrayList<Cliente> clientes = concli.RetornarClientes();
         for(Cliente cliente:clientes){
@@ -63,9 +64,15 @@ public class ControllerPedido {
                         ins.setString(3, pedido.getBrinde());
                         ins.setInt(4, cliente.getID());
                         ins.executeUpdate();
-
+                        
+                        ControllerEntregador entreee = new ControllerEntregador();
+                        entreee.TrabEntregador();
+                        
+                        ControllerEmbalador embaaa = new ControllerEmbalador();
+                        embaaa.TrabEmbalador();
+                        
                         System.out.println("Dados cadastrados com sucesso!");
-
+                        ver = 1;
                     } catch (Exception e) {
                         System.out.println("Erro: "+ e.getMessage());
                     }
@@ -74,7 +81,7 @@ public class ControllerPedido {
                 }
             }
         }
-        return true;
+        return ver != 0;
     }
     
     /*public void AtualizandoQtd(int qtd, int num) throws SQLException{
@@ -106,7 +113,13 @@ public class ControllerPedido {
                 pst.setString(1, id);
 
                 pst.executeUpdate();
+                    
+                ControllerEntregador entreee = new ControllerEntregador();
+                entreee.AguaEntregador();
 
+                ControllerEmbalador embaaa = new ControllerEmbalador();
+                embaaa.AguaEmbalador();
+                
                 System.out.println("Removido com sucesso!");
 
             } catch (Exception e) {
